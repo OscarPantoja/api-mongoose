@@ -1,13 +1,19 @@
 {
   "name": "api-mongoose",
   "version": "1.0.0",
-  "description": "",
+  "description": "Koders api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "kodemia",
+    "express",
+    "api",
+    "mongoose"
+  ],
+  "author": "@OscarPantoja",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
