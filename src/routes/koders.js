@@ -24,4 +24,19 @@ router.get('/', async (request, response) => {
   }
 })
 
+router.post('/', (request, response) => {
+  try {
+    response.json({
+      estatus: 'ok',
+      data: request.body
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      message: error.message
+    })
+  }
+})
+
 module.exports = router
