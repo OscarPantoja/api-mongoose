@@ -24,11 +24,15 @@ router.get('/', async (request, response) => {
   }
 })
 
-router.post('/', (request, response) => {
+router.post('/', async (request, response) => {
   try {
+    const newKoder = await koder.create(request.body)
     response.json({
-      estatus: 'ok',
-      data: request.body
+      success: true,
+      message: 'Koder created',
+      data: {
+        koder: newKoder
+      }
     })
   } catch (error) {
     response.status(400)
